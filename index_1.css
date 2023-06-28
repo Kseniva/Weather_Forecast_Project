@@ -1,0 +1,272 @@
+body{
+    background-color:#FACBCBA6;
+background-image: url(assets/raquel-pedrotti-6dIQqmC9__g-unsplash.jpg);
+background-size: 100% 100vh;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+h1{
+    font-family: Caladea;
+font-size: 6vw;
+font-weight: 600;
+letter-spacing: 0em;
+text-align: left;
+color: #fff;
+margin: 2vw 0;
+
+}
+h2{
+    
+    font-family: Caladea;
+    font-size: 3vw;
+font-weight: 600;
+letter-spacing: 0em;
+text-align: center;
+color: #fff;
+margin: 2vw 0;
+}
+
+.rain{
+    width: 13vw;
+
+}
+/*  Строка поиска */
+.search {
+    position: relative;
+    width: 100%;
+    display: flex;
+    
+    }
+.searchTerm {
+        width: 100%;
+        height: 7vh;
+        border: none;
+        background: #FACBCBA6;
+border-radius: 10px;
+color: #ffffff;
+    }
+.searchTerm:focus{
+    font-size: 5vh;
+    padding-left: 2%;
+    }
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color:    white;
+        font-size: 6vh ;
+        font-family: Caladea;
+        text-shadow: 1px 1px #6f4545;
+        position: absolute;
+        left: 2%;
+        top: 2%;
+     }
+     :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    white;
+        font-size: 6vh ;
+        font-family: Caladea;
+        text-shadow: 1px 1px #6f4545;
+        position: absolute;
+        left: 2%;
+        top: 2%;
+     }
+     ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    white;
+        font-size: 6vh ;
+        font-family: Caladea;
+        text-shadow: 1px 1px #6f4545;
+        position: absolute;
+        left: 2%;
+        top: 2%;
+     }
+
+    .searchButton {
+        background: none;
+        border: none;
+        height: 6.5vh;
+        position: absolute;
+        right: 0%;
+        margin: 3px 2px
+    }
+    .searchButton:hover {
+        border: solid;
+        border-color:  #facbcb00;
+    }
+    .wrap{
+    width: 90%;
+    margin: 0 5% 0 5%;
+    }
+
+
+/* Скроллер-галлерея */
+
+    .scroller_container{
+display: flex;
+flex-direction: row;
+justify-content:space-between;
+align-items: center;
+    }
+    .scroler_content{
+        color: #ffffff;
+        font-family: Caladea;
+        text-shadow: 1px 1px  rgb(131, 115, 115);
+    }
+
+    a.btn{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.8vw;
+        font-weight: 700;
+    }
+
+    a.btn:hover{
+        color: #6f4545;
+    }
+
+    .row_1{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 5px;
+    }
+
+    .city{
+        grid-area: city;
+        font-size: 5vw;
+        font-weight: 600;
+        margin: 5px 5px;
+    }
+
+    .weather{
+        grid-area: wth;
+        font-size: 3vw;
+        margin: 5px 5px;
+    }
+    .weather_img {
+        grid-area: wth_img;
+        position: relative;
+        left: -25%;
+        width: 150%;
+        max-width: 200px;
+    }
+
+    .temp_now{
+        grid-area: tm_n;
+        font-size: 5vw;
+        font-weight: 600;
+    }
+
+    .temp_feel{
+        grid-area: tm_f;
+        font-size: 2vw;
+        font-weight: 600;
+    }
+
+    .row_2{
+        height: 50%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+grid-template-areas: 
+"city city tm_n"
+"wth wth_img tm_f";
+
+    }
+
+    
+    .date{
+        position: relative;
+        top: 13%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 4vh;
+        font-weight: 600;
+      }
+
+
+    .scroler_btn{
+        background-color:#ffffff00;
+        border: none;
+        width: 3vw;
+        height: 3vw;
+    }
+    .scroler_btn:hover{
+        border: solid;
+        border-color: #ffffff00;
+    }
+
+    .scroler_content{
+      background-color: #FACBCBA6;  
+      border-radius: 5px;
+      width: 40%;
+      height: 50vh;
+    }
+
+    /* The switch - the box around the slider */
+.switch {
+    position: relative;
+    right: 1%;
+    display: inline-block;
+    width: 7vw;
+    height: 3.5vh;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:#fcfcfc84;
+        -webkit-transition: .4s;
+        transition: .4s;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 3.5vw;
+      }
+      .slider_text{
+        color: #ffffff;
+        text-shadow: 1px 1px  rgb(131, 115, 115);
+        position: relative;
+        top: 10%;
+        font-size: 1,8vw;
+        
+      }
+      
+      .slider:before {
+        position: absolute;
+        left: 0;
+        content: "";
+        height: 3.5vh;
+        width: 3.5vw;
+        background-color: #fcfcfc84;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 3.5vw;
+      }
+      
+      input:checked + .slider {
+        background-color:#fcfcfc84;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #fcfcfc84;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(3.5vw);
+        -ms-transform: translateX(3.5vw);
+        transform: translateX(3.5vw);
+      }
+
