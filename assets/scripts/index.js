@@ -5,15 +5,15 @@ let city;
 
 
 // создаем функцию для получения данных о погоде
- function getWeather(city) {
+function getWeather(city) {
   const weatherApiKey = '45ae069833aa4900af474813232206'; // записываем в переменную ключ Weather API
   // записываем в переменную ссылку на API
   const url = `http://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${city}&days=5&aqi=yes`;
 
-    fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    // проверяем доступность необходимых данных в консоли
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      // проверяем доступность необходимых данных в консоли
       console.log(data.location.name);
       console.log(data.location.localtime);
       console.log(data.current.temp_c);
@@ -27,13 +27,13 @@ let city;
       console.log(data.current.wind_kph);
       console.log(data.current.vis_km);
       console.log(data.current.condition);
-  })
-  .catch(error => console.log (error));
- }
+    })
+    .catch(error => console.log(error));
+}
 // создаем обработчик отправки формы
 form.onsubmit = function (evt) {
-    evt.preventDefault();
-    city = input.value.trim();
-    console.log(city);
-    getWeather(city)
-  }
+  evt.preventDefault();
+  city = input.value.trim();
+  console.log(city);
+  getWeather(city)
+}
