@@ -3,16 +3,6 @@ const input = document.querySelector('.searchTerm');
 const searchBtn = document.querySelector('.searchButton');
 let city;
 
-////////////// элементы из карточки //////////////
-const cityName = document.querySelector('.city');
-const cityTemp_c = document.querySelector('.temp_now');
-const cityFeelslike_c = document.querySelector('.temp_feel');
-const cityConditionText = document.querySelector('.weather');
-const cityLocalDay = document.querySelector('.day');
-const cityLocalTime = document.querySelector('.time');
-//////////////////////////////////////////////////////////
-
-
 // создаем функцию для получения данных о погоде
 function getWeather(city) {
   // создаем асинхронную функцию для получения данных о погоде
@@ -46,16 +36,6 @@ function getWeather(city) {
       console.log(data.current.wind_kph);
       console.log(data.current.vis_km);
       console.log(data.current.condition);
-
-      //////// записываем данные в карточку ////////////
-      cityName.textContent = data.location.name;
-      cityTemp_c.textContent = data.current.temp_c + " °C";
-      cityFeelslike_c.textContent = "Feels like: " + data.current.feelslike_c + " °C";
-      cityConditionText.textContent = data.current.condition.text;
-      cityLocalDay.textContent = cityDate.toDateString().slice(4);
-      cityLocalTime.textContent = "Local time: " + cityDate.toTimeString().slice(0, 5);
-      ////////////////////////////////////////////////////
-
     })
     .catch(error => console.log(error));
 }
