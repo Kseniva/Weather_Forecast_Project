@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const carouselItems = document.querySelector(".scroller_container_items"); //определяем элемент карусели
+  const carouselItems = document.querySelector(".scroller__container_items"); //определяем элемент карусели
   //console.log(carouselItems);
   const carouselWidth = carouselItems.offsetWidth; //определяем ширину элемента карусели
   //console.log(carouselWidth);
   const itemWidth = carouselWidth / 4; //рассчитываем ширину одного фрагмента
 
-  const nextBtn = document.querySelector(".scroler_btn-right");
-  const prevBtn = document.querySelector(".scroler_btn-left");
+  const nextBtn = document.querySelector(".scroller__container_btn-right");
+  const prevBtn = document.querySelector(".scroller__container_btn-left");
 
   let currentPosition = 0; //запоминаем текущую позицию карусели
 

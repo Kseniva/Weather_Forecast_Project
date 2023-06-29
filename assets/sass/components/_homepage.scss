@@ -102,7 +102,7 @@ h2 {
 
 /* Скроллер-галлерея */
 
-.scroller_container {
+.scroller__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -111,19 +111,24 @@ h2 {
 
 /*Ирина*/
 /*обертка для содержимого карусели*/
-.scroller_container_carousel {
+.scroller__container_carousel {
   width: 100%;
   overflow: hidden;
 }
-.scroller_container_items {
+.scroller__container_items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 200%;
   transition: transform 0.5s;
+  gap: 4vw;
 }
 
-.scroler_content {
+.scroller__content {
   text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  border-radius: 5px;
+  width: 50%;
+  height: 50vh;
 }
 
 a.btn {
@@ -137,7 +142,7 @@ a.btn:hover {
   color: #6f4545;
 }
 
-.row_1 {
+.row-1 {
   display: flex;
   justify-content: space-between;
   margin: 5px 5px;
@@ -173,7 +178,7 @@ a.btn:hover {
   font-weight: 600;
 }
 
-.row_2 {
+.row-2 {
   height: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -192,24 +197,17 @@ a.btn:hover {
   font-size: 4vh;
   font-weight: 600;
 }
-.scroler_btn-left,
-.scroler_btn-right {
+.scroller__container_btn-left,
+.scroller__container_btn-right {
   background-color: #ffffff00;
   border: none;
   width: 3vw;
   height: 3vw;
 }
-.scroler_btn-left:hover,
-.scroler_btn-right:hover {
+.scroller__container_btn-left:hover,
+.scroller__container_btn-right:hover {
   border: solid;
   border-color: #ffffff00;
-}
-
-.scroler_content {
-  background-color: #facbcba6;
-  border-radius: 5px;
-  width: 50%;
-  height: 50vh;
 }
 
 /* The switch - the box around the slider */
@@ -226,7 +224,7 @@ a.btn:hover {
   display: none;
 }
 
-.slider {
+.slider__round {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -241,13 +239,13 @@ a.btn:hover {
   justify-content: space-around;
   border-radius: 3.5vw;
 }
-.slider_text {
+.slider__round_text {
   text-shadow: 1px 1px rgb(131, 115, 115);
   position: relative;
   top: 10%;
   font-size: 1, 8vw;
 }
-.slider:before {
+.slider__round:before {
   position: absolute;
   left: 0;
   content: "";
@@ -258,13 +256,13 @@ a.btn:hover {
   transition: 0.4s;
   border-radius: 3.5vw;
 }
-input:checked + .slider {
+input:checked + .slider__round {
   background-color: #fcfcfc84;
 }
-input:focus + .slider {
+input:focus + .slider__round {
   box-shadow: 0 0 1px #fcfcfc84;
 }
-input:checked + .slider:before {
+input:checked + .slider__round:before {
   -webkit-transform: translateX(3.5vw);
   -ms-transform: translateX(3.5vw);
   transform: translateX(3.5vw);
