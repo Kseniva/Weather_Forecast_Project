@@ -1,0 +1,66 @@
+body{
+background: no-repeat url("../assets/images/newyork.png");
+color: #fff;
+}
+
+header {
+   display: flex;
+   flex-direction: row;
+}
+
+header h1 {
+   font-size: 42px;
+   text-align: left;
+   margin: 50px 50px 10px 0;
+}
+
+a {
+   margin: 0 0 60px 850px;
+   color: #fff;
+   font-size: 24px;
+   font-weight: 900;
+}
+
+.search {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+}
+
+.scroler_content{
+   display: flex;
+   flex-direction: row;
+   text-shadow: 1px 1px rgb(131, 115, 115);
+}
+   
+.row_1, .row_2, .row_3, .row_4, .weekday {
+   background-color: #FACBCB;
+}
+
+.row_2, .row_3 {
+   height: 500px;
+   width: 630px; 
+   border-radius: 20px;
+}
+
+.row_5 {
+   display: flex;
+   flex-direction: row;
+   background-color: #FACBCB;
+   margin: 20px 100px 30px 100px;
+   justify-content: space-between;
+   align-self: stretch;
+   text-align: center;
+}
+
+.weekday {
+   background-color: hsl(0, 64%, 86%);
+   /*padding: 50px 20px 10px 20px;*/
+   border-radius: 20px;
+   font-size: 20px;
+}
+
+.weekday img {
+   height: 35vh;
+   width: 15vw;
+}
