@@ -14,99 +14,98 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/sass/app.css" />
-    <link rel="stylesheet" href="assets/index.css"/>
     <title>Weather Forecast Home Page</title>
   </head>
-  
-  <body>
-    <header>
-      <div>
-        <img src="../assets/images/rain.png" alt="rain">
-    </div>
-    <h1>WeatherApp</h1>
-    <a href="#">Home page</a>
 
-    <div class="search">
-      <input type="text" class="searchTerm" placeholder="Search...">
-      <button type="submit" class="searchButton">
-        <!--<img src="../assets/img/search.png" alt="search">!-->
-      </button>
-</div>
-    </header>
+  <body class="body--forecast">
+    <div class="root--forecast">
+      <header class="header--forecast">
+        <div>
+          <img src="assets/images/rain.png" alt="rain" />
+        </div>
+        <h1 class="header__title--forecast">WeatherApp</h1>
+        <a class="link--forecast" href="#">Home page</a>
 
-    <main> 
-      <div class="scroller_container">
-          <div class="row_1">
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider round">
+        <div class="search--forecast">
+          <input type="text" class="searchTerm" placeholder="Search..." />
+          <button type="submit" class="searchButton">
+            <!--<img src="../assets/img/search.png" alt="search">!-->
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div class="scroller_container">
+          <div class="row-1-forecast">
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round">
                 <div class="slider_text">C</div>
                 <div class="slider_text">F</div>
-            </span>
-        </label>
-      </div>
+              </span>
+            </label>
+          </div>
 
-      <div class="row_2">
-        <div class="city">New-York</div>
-        <div class="weather">Sunny</div>
-       <div class="sun">
-        <img src="../assets/images/sun.png" alt="sun">
-       </div>
-       <div class="temp_now">+20C</div>
-       <div class="temp_feel">Feels time: +22C</div>
-       <div class="date">
-        <div class="day">June 20, Tuesday</div>
-        <div class="time">Local time: 9:15 a.m.</div>
-       </div>
-      </div>
+          <div class="row-2-forecast">
+            <div class="city">New-York</div>
+            <div class="weather">Sunny</div>
+            <div class="sun">
+              <img src="assets/images/sun.png" alt="sun" />
+            </div>
+            <div class="temp_now">+20C</div>
+            <div class="temp_feel">Feels time: +22C</div>
+            <div class="date">
+              <div class="day">June 20, Tuesday</div>
+              <div class="time">Local time: 9:15 a.m.</div>
+            </div>
+          </div>
 
-      <div class="row_3">
-        <div class="humidity">Humidity</div>
-        <div class="wind">Wind</div>
-        <div class="UV-index">UV-index</div>
-        <div class="visibility">Visibility</div>
-        <div class="pressure">Pressure</div>
-      </div>
+          <div class="row-3-forecast">
+            <div class="humidity">Humidity</div>
+            <div class="wind">Wind</div>
+            <div class="UV-index">UV-index</div>
+            <div class="visibility">Visibility</div>
+            <div class="pressure">Pressure</div>
+          </div>
 
-      <div class="row_4">
-        <div class="air quality">Air quality</div>
-      </div>
+          <div class="row-4-forecast">
+            <div class="air quality">Air quality</div>
+          </div>
 
-      <div class="row_5">
-        <div class="weekday">
-          <div class="temp_now">28C</div>
-          <img src="../assets/images/rain.png" alt="rain">
-          <div class="wednesday">Wed</div>
+          <div class="row-5-forecast">
+            <div class="weekday">
+              <div class="temp_now">28C</div>
+              <img src="assets/images/rain.png" alt="rain" />
+              <div class="wednesday">Wed</div>
+            </div>
+
+            <div class="weekday">
+              <div class="temp_now">25C</div>
+              <img src="assets/images/sunclouds.png" alt="sunClouds" />
+              <div class="thursday">Thu</div>
+            </div>
+
+            <div class="weekday">
+              <div class="temp_now">29C</div>
+              <img src="assets/images/rain.png" alt="rain" />
+              <div class="friday">Fri</div>
+            </div>
+
+            <div class="weekday">
+              <div class="temp_now">30C</div>
+              <img src="assets/images/sunclouds.png" alt="sunClouds" />
+              <div class="saturday">Sat</div>
+            </div>
+
+            <div class="weekday">
+              <div class="temp_now">30C</div>
+              <img src="assets/images/sunclouds.png" alt="sunClouds" />
+              <div class="sunday">Sun</div>
+            </div>
+          </div>
         </div>
-
-        <div class="weekday">
-          <div class="temp_now">25C</div>
-          <img src="../assets/images/sunclouds.png" alt="sunClouds">
-          <div class="thursday">Thu</div>
-        </div>
-
-        <div class="weekday">
-          <div class="temp_now">29C</div>
-          <img src="../assets/images/rain.png" alt="rain">
-          <div class="friday">Fri</div>
-        </div>
-
-        <div class="weekday">
-          <div class="temp_now">30C</div>
-          <img src="../assets/images/sunclouds.png" alt="sunClouds">
-          <div class="saturday">Sat</div>
-        </div>
-
-        <div class="weekday">
-          <div class="temp_now">30C</div>
-          <img src="../assets/images/sunclouds.png" alt="sunClouds">
-          <div class="sunday">Sun</div>
-        </div>
-        </div>
-      </div>
-    </main>
-
-    <div class="forecast-root"></div>
+      </main>
+    </div>
     <script src="./assets/scripts/weather.js"></script>
   </body>
 </html>

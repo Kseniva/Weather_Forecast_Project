@@ -1,15 +1,15 @@
-.home-root {
+.root--home {
     @include base-styles;
     
 }
 // Valeria
-body{
+.body--home{
     background-color:#FACBCBA6;
     background-image: url(../images/raquel-pedrotti-6dIQqmC9__g-unsplash.jpg);
     background-size: 100% 100vh;
     background-repeat: no-repeat;
 }
-header{
+.header--home{
     display: flex;
     flex-direction: row;
 }
@@ -252,4 +252,3 @@ input:checked + .slider:before {
     -ms-transform: translateX(3.5vw);
     transform: translateX(3.5vw);
 }
-

@@ -1,3 +1,62 @@
-.forecast-root {
+.root--forecast {
     @include base-styles;
 }
+.body--forecast{
+    background: no-repeat url("../images/newyork.png");
+    color: #ffffff;
+    }
+    
+.header--forecast {
+       display: flex;
+       flex-direction: row;
+    }
+    
+    .header__title--forecast {
+       font-size: 42px;
+       text-align: left;
+       margin: 50px 50px 10px 0;
+    }
+    
+    .link--forecast {
+       margin: 0 0 60px 850px;
+       color: #fff;
+       font-size: 24px;
+       font-weight: 900;
+    }
+    
+    .search--forecast {
+       display: flex;
+       flex-direction: column;
+       width: 80%;
+    } 
+    .row-1-forecast, .row-2-forecast, .row-3-forecast, .row-4-forecast, .weekday {
+       background-color: #FACBCB;
+    }
+    
+    .row-2-forecast, .row-3-forecast {
+       height: 500px;
+       width: 630px; 
+       border-radius: 20px;
+    }
+    
+    .row-5-forecast {
+       display: flex;
+       flex-direction: row;
+       background-color: #FACBCB;
+       margin: 20px 100px 30px 100px;
+       justify-content: space-between;
+       align-self: stretch;
+       text-align: center;
+    }
+    
+    .weekday {
+       background-color: hsl(0, 64%, 86%);
+       /*padding: 50px 20px 10px 20px;*/
+       border-radius: 20px;
+       font-size: 20px;
+    }
+    
+    .weekday img {
+       height: 35vh;
+       width: 15vw;
+    }
