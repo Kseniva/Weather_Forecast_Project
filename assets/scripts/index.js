@@ -3,8 +3,6 @@ const input = document.querySelector('.searchTerm');
 const searchBtn = document.querySelector('.searchButton');
 let city;
 
-// создаем функцию для получения данных о погоде
-function getWeather(city) {
 // создаем асинхронную функцию для получения данных о погоде
 async function getWeatherData(city) {
   const weatherApiKey = '45ae069833aa4900af474813232206'; // записываем в переменную ключ Weather API
@@ -15,36 +13,8 @@ async function getWeatherData(city) {
   if (response.ok) {
   return data; // вывод данных при успешно выполненом запросе
   } else {
-    throw new Error (`${response.statusText}`) // генерируем ошибку при невыполнении запроса
+    throw new Error (` ${response.statusText}`) // генерируем ошибку при невыполнении запроса
   }
-}
-
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      // проверяем доступность необходимых данных в консоли
-      console.log(data.location.name);
-      console.log(data.location.localtime);
-      console.log(data.current.temp_c);
-      console.log(data.current.temp_f);
-      console.log(data.current.humidity);
-      console.log(data.current.pressure_mb); // указано в мБ, необходимо перевести в мм рт.ст.
-      console.log(data.current.uv);
-      console.log(data.current.wind_kph);
-      console.log(data.current.feelslike_c);
-      console.log(data.current.feelslike_f);
-      console.log(data.current.wind_kph);
-      console.log(data.current.vis_km);
-      console.log(data.current.condition);
-    })
-    .catch(error => console.log(error));
-}
-// создаем обработчик отправки формы
-form.onsubmit = function (evt) {
-  evt.preventDefault();
-  city = input.value.trim();
-  console.log(city);
-  getWeather(city)
 }
 
 // создаем обработчик отправки формы
