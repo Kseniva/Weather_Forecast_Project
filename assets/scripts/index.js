@@ -3,6 +3,7 @@ const input = document.querySelector('.searchTerm');
 const searchBtn = document.querySelector('.searchButton');
 let city;
 
+
 ////////////// элементы из карточки //////////////
 const cityName = document.querySelector('.city');
 const cityTemp_c = document.querySelector('.temp_now');
@@ -23,7 +24,7 @@ async function getWeatherData(city) {
   if (response.ok) {
     return data; // вывод данных при успешно выполненом запросе
   } else {
-    throw new Error(` ${response.statusText}`) // генерируем ошибку при невыполнении запроса
+    throw new Error (` ${response.statusText}`) // генерируем ошибку при невыполнении запроса
   }
 }
 
