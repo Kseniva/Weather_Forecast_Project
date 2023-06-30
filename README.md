@@ -16,7 +16,7 @@
 - Ирина Абрамова (https://github.com/Lira11io)
 - Оксана Тайсумова (https://github.com/Oksana2211)
 - Валерия Шеменева ()
-- klara ()
+- klara (https://github.com/BoomZombie)
 
 
 
