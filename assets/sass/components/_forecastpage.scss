@@ -1,62 +1,113 @@
 .root--forecast {
-    @include base-styles;
+  @include base-styles;
 }
-.body--forecast{
-    background: no-repeat url("../images/newyork.png");
-    color: #ffffff;
-    }
-    
-.header--forecast {
-       display: flex;
-       flex-direction: row;
-    }
-    
-    .header__title--forecast {
-       font-size: 42px;
-       text-align: left;
-       margin: 50px 50px 10px 0;
-    }
-    
-    .link--forecast {
-       margin: 0 0 60px 850px;
-       color: #fff;
-       font-size: 24px;
-       font-weight: 900;
-    }
-    
-    .search--forecast {
-       display: flex;
-       flex-direction: column;
-       width: 80%;
-    } 
-    .row-1-forecast, .row-2-forecast, .row-3-forecast, .row-4-forecast, .weekday {
-       background-color: #FACBCB;
-    }
-    
-    .row-2-forecast, .row-3-forecast {
-       height: 500px;
-       width: 630px; 
-       border-radius: 20px;
-    }
-    
-    .row-5-forecast {
-       display: flex;
-       flex-direction: row;
-       background-color: #FACBCB;
-       margin: 20px 100px 30px 100px;
-       justify-content: space-between;
-       align-self: stretch;
-       text-align: center;
-    }
-    
-    .weekday {
-       background-color: hsl(0, 64%, 86%);
-       /*padding: 50px 20px 10px 20px;*/
-       border-radius: 20px;
-       font-size: 20px;
-    }
-    
-    .weekday img {
-       height: 35vh;
-       width: 15vw;
-    }
+.body--forecast {
+  background: no-repeat url("../images/newyork.png");
+  color: #ffffff;
+}
+
+/*стили хедера Ирина*/
+.header__forecast {
+  margin-top: 2vh;
+  flex-direction: row;
+
+  /*первая строка хедера*/
+  .header__forecast-first {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__forecast-icon {
+    width: 10vw;
+  }
+
+  .header__forecast-link {
+    margin-right: 3vw;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  /*вторая строка хедера*/
+  .header__forecast-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .header__forecast-title {
+    font-size: 42px;
+    text-align: left;
+    margin: 0;
+  }
+
+  /*строка поиска*/
+  .search__forecast-line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+  }
+
+  .search__forecast-term {
+    width: 100%;
+    height: 7vh;
+    border: none;
+    background: #facbcba6;
+    border-radius: 10px;
+  }
+  .search__forecast-term:focus {
+    font-size: 5vh;
+    padding-left: 2%;
+  }
+
+  .search__forecast-button {
+    background: none;
+    border: none;
+    height: 6.5vh;
+    position: absolute;
+    right: 0%;
+    margin: 3px 2px;
+  }
+  .search__forecast-button:hover {
+    border: solid;
+    border-color: #facbcb00;
+  }
+}
+
+.row-1-forecast,
+.row-2-forecast,
+.row-3-forecast,
+.row-4-forecast,
+.weekday {
+  background-color: #facbcb9c;
+}
+
+.row-2-forecast,
+.row-3-forecast {
+  height: 500px;
+  width: 630px;
+  border-radius: 20px;
+}
+
+.row-5-forecast {
+  display: flex;
+  flex-direction: row;
+  background-color: #facbcb;
+  margin: 20px 100px 30px 100px;
+  justify-content: space-between;
+  align-self: stretch;
+  text-align: center;
+}
+
+.weekday {
+  background-color: hsl(0, 64%, 86%);
+  /*padding: 50px 20px 10px 20px;*/
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.weekday img {
+  height: 35vh;
+  width: 15vw;
+}
