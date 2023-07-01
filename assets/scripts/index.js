@@ -11,6 +11,7 @@ const cityFeelslike_c = document.querySelector('.temp_feel');
 const cityConditionText = document.querySelector('.weather');
 const cityLocalDay = document.querySelector('.day');
 const cityLocalTime = document.querySelector('.time');
+const cityWeatherIcon = document.querySelector('.weather_img')
 
 //////////////////////////////////////////////////////////
 
@@ -50,7 +51,7 @@ form.addEventListener("submit", async function (evt) {
     console.log(data.current.vis_km);
     console.log(data.current.condition);
 
-    //////// записываем данные в карточку ////////////
+    //////// записываем данные в карточку + добавление иконки ////////////
     cityName.textContent = data.location.name;
     cityTemp_c.textContent = data.current.temp_c + " °C";
     cityFeelslike_c.textContent = "Feels like: " + data.current.feelslike_c + " °C";
@@ -58,6 +59,9 @@ form.addEventListener("submit", async function (evt) {
     const cityDate = new Date(data.location.localtime);
     cityLocalDay.textContent = cityDate.toDateString().slice(4);
     cityLocalTime.textContent = "Local time: " + cityDate.toTimeString().slice(0, 5);
+    const icon = data.current.condition.icon;
+    cityWeatherIcon.innerHTML = `<img src="${icon}" alt="${data.current.condition.text}" />`;
+  
     ////////////////////////////////////////////////////
   } catch (error) {
     console.log(error);
@@ -66,3 +70,5 @@ form.addEventListener("submit", async function (evt) {
   // Очищаем поля формы 
   evt.target.reset();
 });
+
+
