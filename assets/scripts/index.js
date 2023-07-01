@@ -12,6 +12,7 @@ const cityConditionText = document.querySelector('.weather');
 const cityLocalDay = document.querySelector('.day');
 const cityLocalTime = document.querySelector('.time');
 const cityWeatherIcon = document.querySelector('.weather_img')
+const btnSwitchTemp = document.querySelector('.switch__btn-temp')
 
 //////////////////////////////////////////////////////////
 
@@ -61,6 +62,17 @@ form.addEventListener("submit", async function (evt) {
     cityLocalTime.textContent = "Local time: " + cityDate.toTimeString().slice(0, 5);
     const icon = data.current.condition.icon;
     cityWeatherIcon.innerHTML = `<img src="${icon}" alt="${data.current.condition.text}" />`;
+
+    //Переключатель формата температуры
+btnSwitchTemp.addEventListener( 'click', ()=>{ 
+  if (btnSwitchTemp.checked===true){
+    cityTemp_c.textContent = data.current.temp_f + " F";
+    cityFeelslike_c.textContent = "Feels like: " + data.current.feelslike_f + " F";
+  } else {
+    cityTemp_c.textContent = data.current.temp_c + " °C";
+    cityFeelslike_c.textContent = "Feels like: " + data.current.feelslike_c + " °C";
+  }
+})
   
     ////////////////////////////////////////////////////
   } catch (error) {
@@ -70,5 +82,6 @@ form.addEventListener("submit", async function (evt) {
   // Очищаем поля формы 
   evt.target.reset();
 });
+
 
 
