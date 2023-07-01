@@ -14,6 +14,40 @@ const cityLocalTime = document.querySelector('.time');
 
 //////////////////////////////////////////////////////////
 
+// будущий прогноз погоды
+const weatherDetailsContainer = document.querySelector('.row_2');
+
+async function getForecast(city) {
+  const weatherApiKey = '45ae069833aa4900af474813232206'; // записываем в переменную ключ Weather API
+  // записываем в переменную ссылку на API
+  const url = `http://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${city}&days=5`;
+  const response = await fetch(url);
+  const data = await response.json();
+  if (response.ok) {
+    const forecastDays = data.forecast.forecastday;
+forecastDays.forEach(day => {
+  const date = new Date(day.date);
+  const weekday = date.toLocaleString('en-US', { weekday: 'short' });
+  const tempC = Math.round(day.day.avgtemp_c);
+  const tempF = Math.round(day.day.avgtemp_f);
+  const condition = day.day.condition.text;
+  const icon = day.day.condition.icon;
+  const html = `
+    <div class="forecast-day">
+      <div class="forecast-temp">${tempC}°C/ ${tempF}°F</div>
+      <div class="forecast-icon"><img src="${icon}" alt="${condition}"></div>
+      <div class="forecast-date">${weekday}</div>
+    </div>
+  `;
+  weatherDetailsContainer.insertAdjacentHTML('beforeend', html);
+});
+    return data; // вывод данных при успешно выполненом запросе
+  } else {
+    throw new Error (`${response.statusText}`) // генерируем ошибку при невыполнении запроса
+  }
+}
+//
+
 // создаем асинхронную функцию для получения данных о погоде
 async function getWeatherData(city) {
   const weatherApiKey = '45ae069833aa4900af474813232206'; // записываем в переменную ключ Weather API
@@ -24,7 +58,7 @@ async function getWeatherData(city) {
   if (response.ok) {
     return data; // вывод данных при успешно выполненом запросе
   } else {
-    throw new Error (` ${response.statusText}`) // генерируем ошибку при невыполнении запроса
+    throw new Error (`${response.statusText}`) // генерируем ошибку при невыполнении запроса
   }
 }
 
@@ -49,6 +83,7 @@ form.addEventListener("submit", async function (evt) {
     console.log(data.current.wind_kph);
     console.log(data.current.vis_km);
     console.log(data.current.condition);
+    console.log(data.current.air_quality.pm2_5);
 
     //////// записываем данные в карточку ////////////
     cityName.textContent = data.location.name;
@@ -59,6 +94,8 @@ form.addEventListener("submit", async function (evt) {
     cityLocalDay.textContent = cityDate.toDateString().slice(4);
     cityLocalTime.textContent = "Local time: " + cityDate.toTimeString().slice(0, 5);
     ////////////////////////////////////////////////////
+    // вызываем функцию получения прогноза и обрабатываем ошибки
+    await getForecast(city);
   } catch (error) {
     console.log(error);
     alert(`${error.message}.Try again`)
