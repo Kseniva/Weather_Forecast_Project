@@ -2,7 +2,7 @@
 //ищем элементы и записываем их переменные
 const inputForecast = document.querySelector(".search__forecast-term");
 const search = document.querySelector(".search__forecast-line");
-const picture = document.querySelector(".row-2-forecast");
+const picture = document.querySelector(".body--forecast");
 
 //записываем в переменную ключ к API Pexels
 const API_KEY = "L8wkT6ttA7B00H3oHxpl7CwiA4maBhN5XeLy7vWC3DbT1Ik71RYTVvLf";
@@ -38,7 +38,7 @@ function searchHandler() {
         //если получено больше одного фото
         if (data.photos.length > 0) {
           const randomIndex = Math.floor(Math.random() * data.photos.length);
-          const imgSrc = data.photos[randomIndex].src.medium;
+          const imgSrc = data.photos[randomIndex].src.large;
 
           //загружаем в качестве фонового изображения полученное фото
           picture.style.backgroundImage = `url(${imgSrc})`;
@@ -47,6 +47,9 @@ function searchHandler() {
           picture.style.backgroundSize = "cover";
           picture.style.backgroundPozition = "center";
           picture.style.backgroundColor = "rgba(255, 255, 255, 0.5)"; //делаем фон полупрозрачным
+
+          //очищаем значение строки поиска
+          inputForecast.value = "";
         } else {
           //если нет сопадения по названию фото, выдаем случайное фото природы
           const randUrl = `https://api.pexels.com/v1/search?query=nature&per_page=1&page=1`;
@@ -67,6 +70,9 @@ function searchHandler() {
               picture.style.backgroundSize = "cover";
               picture.style.backgroundPozition = "center";
               picture.style.backgroundColor = "rgba(255, 255, 255, 0.5)"; //делаем фон полупрозрачным
+
+              //очищаем значение строки поиска
+              inputForecast.value = "";
             })
             .catch((error) => console.log(error));
         }
