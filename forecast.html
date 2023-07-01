@@ -19,18 +19,25 @@
 
   <body class="body--forecast">
     <div class="root--forecast">
-      <header class="header--forecast">
-        <div>
-          <img src="assets/images/rain.png" alt="rain" />
+      <header class="header__forecast">
+        <div class="header__forecast-first">
+          <div class="header__forecast-icon">
+            <img src="assets/images/rain.png" alt="rain" />
+          </div>
+          <a class="header__forecast-link" href="index.html">Home page</a>
         </div>
-        <h1 class="header__title--forecast">WeatherApp</h1>
-        <a class="link--forecast" href="#">Home page</a>
-
-        <div class="search--forecast">
-          <input type="text" class="searchTerm" placeholder="Search..." />
-          <button type="submit" class="searchButton">
-            <!--<img src="../assets/img/search.png" alt="search">!-->
-          </button>
+        <div class="header__forecast-second">
+          <h1 class="header__forecast-title">WeatherApp</h1>
+          <div class="search__forecast-line">
+            <input
+              type="text"
+              class="search__forecast-term"
+              placeholder="Search..."
+            />
+            <button type="submit" class="search__forecast-button">
+              <img src="assets/images/search.png" alt="search" />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -106,6 +113,7 @@
         </div>
       </main>
     </div>
+    <script src="assets/scripts/forecast.js"></script>
     <script src="./assets/scripts/weather.js"></script>
   </body>
 </html>
