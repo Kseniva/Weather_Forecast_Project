@@ -124,7 +124,10 @@ h2 {
   gap: 4vw;
 }
 
-.scroller__content {
+.scroller__content-1,
+.scroller__content-2,
+.scroller__content-3,
+.scroller__content-4 {
   text-shadow: 1px 1px rgb(131, 115, 115);
   background-color: #facbcba6;
   border-radius: 5px;
