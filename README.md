@@ -15,7 +15,7 @@
 - Ксения Кочинева (https://github.com/Kseniva)
 - Ирина Абрамова (https://github.com/Lira11io)
 - Оксана Тайсумова (https://github.com/Oksana2211)
-- Валерия Шеменева ()
+- Валерия Шеменева (https://github.com/valerishemen)
 - klara (https://github.com/BoomZombie)
 
 
