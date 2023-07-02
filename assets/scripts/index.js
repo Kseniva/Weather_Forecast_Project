@@ -150,7 +150,7 @@ async function getWeatherPopular(city) {
 document.addEventListener("DOMContentLoaded", async function () {
   try {
     //записываем в массив список популярных городов
-    const cities = ["London", "New York", "Moscow", "Saint Peterburg"];
+    const cities = ["London", "New York", "Moscow", "Saint Petersburg"];
     for (let i = 0; i < cities.length; i++) {
       const data = await getWeatherPopular(cities[i]);
 
