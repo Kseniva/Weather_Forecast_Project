@@ -20,7 +20,6 @@ const citySearched = urlParams.get('city');
 //записываем в переменную ключ к WeatherAPI
 const weatherApiKey = "45ae069833aa4900af474813232206";
 
-
 //записываем в переменную ключ к API Pexels
 const API_KEY = "L8wkT6ttA7B00H3oHxpl7CwiA4maBhN5XeLy7vWC3DbT1Ik71RYTVvLf";
 
