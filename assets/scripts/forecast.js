@@ -18,7 +18,7 @@ const cityFeelslike_c = document.querySelector('.temp_feel');
 const cityConditionText = document.querySelector('.weather');
 const cityLocalDay = document.querySelector('.day');
 const cityLocalTime = document.querySelector('.time');
-const cityWeatherIcon = document.querySelector('.sun')
+const cityWeatherIcon = document.querySelector('.weather_img')
 const btnSwitchTemp = document.querySelector('.switch__btn-temp')
 const fiveDayForecastContainer =document.querySelector(".row-5-forecast");
 
