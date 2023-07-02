@@ -13,9 +13,9 @@
   flex-direction: row;
 }
 
-img{
-    width: 100%;
-    height: 100%;
+img {
+  width: 100%;
+  height: 100%;
 }
 h1 {
   font-size: 6vw;
@@ -124,7 +124,10 @@ h2 {
   gap: 4vw;
 }
 
-.scroller__content {
+.scroller__content-1,
+.scroller__content-2,
+.scroller__content-3,
+.scroller__content-4 {
   text-shadow: 1px 1px rgb(131, 115, 115);
   background-color: #facbcba6;
   border-radius: 5px;
@@ -161,14 +164,13 @@ a.btn:hover {
   margin: 5px 5px;
 }
 .weather_img {
-   grid-area: wth_img;
-    position: relative;
-    left: -15%;
-    bottom: 20%;
-    width: 100%;
-    max-width: 100px;
+  grid-area: wth_img;
+  position: relative;
+  left: -15%;
+  bottom: 20%;
+  width: 100%;
+  max-width: 100px;
 }
-
 
 .temp_now{
     grid-area: tm_n;
@@ -183,11 +185,11 @@ a.btn:hover {
 }
 
 .row-2 {
-   height: 50%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
     "city city tm_n tm_n"
     "wth wth_img tm_f tm_f";
 }
@@ -213,11 +215,11 @@ a.btn:hover {
   border: solid;
   border-color: #ffffff00;
 }
-.scroler__content{
-    background-color: #FACBCBA6;  
-    border-radius: 5px;
-    width: 40%;
-    height: 50vh;
+.scroler__content {
+  background-color: #facbcba6;
+  border-radius: 5px;
+  width: 40%;
+  height: 50vh;
 }
 
 /* The switch - the box around the slider */
@@ -250,16 +252,17 @@ a.btn:hover {
   justify-content: space-around;
   border-radius: 3.5vw;
 }
-.slider_text_c, .slider_text_f{
-    text-shadow: 1px 1px  rgb(131, 115, 115);
-    position: relative;
-    font-size: 1,8vw;
-}  
-.slider_text_f{
-    left: 50%;
-}  
-.slider_text_c{
-        left: 20%;
+.slider_text_c,
+.slider_text_f {
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  position: relative;
+  font-size: 1.8vw;
+}
+.slider_text_f {
+  left: 50%;
+}
+.slider_text_c {
+  left: 20%;
 }
 .slider__round:before {
   position: absolute;
