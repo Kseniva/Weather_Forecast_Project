@@ -105,7 +105,7 @@ grid-area: col2;
   height: 50%;
   display: grid;
   grid-template-columns: 40% 40%;
-  grid-template-rows: 85% 15%;
+  grid-template-rows: 60% 15%;
   grid-template-areas: 
   "col1 col2"
   "col1 r2";
@@ -130,10 +130,13 @@ grid-area: col2;
   background-color: hsl(0, 64%, 86%);
   /*padding: 50px 20px 10px 20px;*/
   border-radius: 20px;
-  font-size: 20px;
+  height:fit-content
 }
 
 .weekday img {
-  height: 35vh;
-  width: 15vw;
+  height: 10vh;
+  width: 5vw;
+}
+.temp_now {
+  font-size: 15px;
 }

@@ -1,159 +1,178 @@
 <!--Valeria-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/sass/app.css" />
-  <title>Weather Forecast</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/sass/app.css" />
+    <title>Weather Forecast</title>
+  </head>
 
-<body class="body--home">
-  <div class="root--home">
-    <header class="header--home">
-      <div class="icon rain">
-        <img src="assets/images/rain.png" alt="rain" />
-      </div>
-      <h1>WeatherApp</h1>
-    </header>
-    <main>
-      <div class="wrap">
-        <form action="/apply/" class="search">
-          <input type="text" class="searchTerm" placeholder="Search..." />
-          <button type="submit" class="searchButton">
-            <img src="assets/images/search-icon-1.png" alt="search" />
+  <body class="body--home">
+    <div class="root--home">
+      <header class="header--home">
+        <div class="icon rain">
+          <img src="assets/images/rain.png" alt="rain" />
+        </div>
+        <h1>WeatherApp</h1>
+      </header>
+      <main>
+        <div class="wrap">
+          <form action="/apply/" class="search">
+            <input type="text" class="searchTerm" placeholder="Search..." />
+            <button type="submit" class="searchButton">
+              <img src="assets/images/search-icon-1.png" alt="search" />
+            </button>
+          </form>
+        </div>
+        <h2>Top searches</h2>
+        <div class="scroller__container">
+          <!-- Ирина -->
+          <!-- немного изменила название класса у кнопки для работы js -->
+          <button class="scroller__container_btn-left">
+            <img
+              src="assets/images/🦆 icon_chevron-left-arrow_.png"
+              alt="left_btn"
+            />
           </button>
-        </form>
-      </div>
-      <h2>Top searches</h2>
-      <div class="scroller__container">
-        <!-- Ирина -->
-        <!-- немного изменила название класса у кнопки для работы js -->
-        <button class="scroller__container_btn-left">
-          <img src="assets/images/🦆 icon_chevron-left-arrow_.png" alt="left_btn" />
-        </button>
-        <!-- Ирина -->
-        <!-- добавлены 2 div для работы js -->
-        <!-- добавлены еще 2 карточки погоды для примера работы js -->
-        <div class="scroller__container_carousel">
-          <div class="scroller__container_items">
-            <div class="scroller__content">
-              <div class="row-1">
-                <a href="forecast.html" class="btn">View more</a>
-                <label class="switch">
-                  <input type="checkbox" class="switch__btn-temp" />
-                  <span class="slider__round"></span>
-                  <span class="slider_text_c">C</span>
-                  <span class="slider_text_f">F</span>
-                </label>
-              </div>
-              <div class="row-2">
-                <div class="city">New York</div>
-                <div class="weather">Sunny</div>
-                <div class="weather_img">
-                  <img src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png" alt="sun" />
+          <!-- Ирина -->
+          <!-- добавлены 2 div для работы js -->
+          <!-- добавлены еще 2 карточки погоды для примера работы js -->
+          <div class="scroller__container_carousel">
+            <div class="scroller__container_items">
+              <div class="scroller__content">
+                <div class="row-1">
+                  <label class="switch">
+                    <input type="checkbox" class="switch__btn-temp" />
+                    <span class="slider__round"></span>
+                    <span class="slider_text_c">C</span>
+                    <span class="slider_text_f">F</span>
+                  </label>
                 </div>
-                <div class="temp_now">+22</div>
-                <div class="temp_feel">Feels like:</div>
-              </div>
-              <div class="date">
-                <div class="day">June 20</div>
-                <div class="time">Local time: 9 a.m</div>
-              </div>
-            </div>
-            <div class="scroller__content">
-              <div class="row-1">
-                <a href="" class="btn">View more</a>
-                <label class="switch">
-                  <input type="checkbox" class="switch__btn-temp" />
-                  <span class="slider__round"></span>
-                  <span class="slider_text_c">C</span>
-                  <span class="slider_text_f">F</span>
-                </label>
-              </div>
-              <div class="row-2">
-                <div class="city">New York2</div>
-                <div class="weather">Sunny</div>
-                <div class="weather_img">
-                  <img src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png" alt="sun" />
-                </div>
-                <div class="temp_now">+22</div>
-                <div class="temp_feel">Feels like:</div>
-              </div>
-              <div class="date">
-                <div class="day">June 20</div>
-                <div class="time">Local time: 9 a.m</div>
-              </div>
-            </div>
-            <div class="scroller__content">
-              <div class="row-1">
-                <a href="" class="btn">View more</a>
-                <label class="switch">
-                  <input type="checkbox" />
-                  <div class="slider__round">
-                    <div class="slider__round_text">C</div>
-                    <div class="slider__round_text">F</div>
+                <div class="row-2">
+                  <div class="city">New York</div>
+                  <div class="weather">Sunny</div>
+                  <div class="weather_img">
+                    <img
+                      src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png"
+                      alt="sun"
+                    />
                   </div>
-                </label>
-              </div>
-              <div class="row-2">
-                <div class="city">New York3</div>
-                <div class="weather">Sunny</div>
-                <div class="weather_img">
-                  <img src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png" alt="sun" />
+                  <div class="temp_now">+22</div>
+                  <div class="temp_feel">Feels like:</div>
                 </div>
-
-                <div class="temp_now">+22</div>
-                <div class="temp_feel">Feels like:</div>
+                <div class="date">
+                  <div class="day">June 20</div>
+                  <div class="time">Local time: 9 a.m</div>
+                </div>
               </div>
-
-              <div class="date">
-                <div class="day">June 20</div>
-                <div class="time">Local time: 9 a.m</div>
-              </div>
-            </div>
-            <div class="scroller__content">
-              <div class="row-1">
-                <a href="" class="btn">View more</a>
-                <label class="switch">
-                  <input type="checkbox" />
-                  <div class="slider__round">
-                    <div class="slider__round_text">C</div>
-                    <div class="slider__round_text">F</div>
+              <div class="scroller__content">
+                <div class="row-1">
+                  <label class="switch">
+                    <input type="checkbox" class="switch__btn-temp" />
+                    <span class="slider__round"></span>
+                    <span class="slider_text_c">C</span>
+                    <span class="slider_text_f">F</span>
+                  </label>
+                </div>
+                <div class="row-2">
+                  <div class="city">New York2</div>
+                  <div class="weather">Sunny</div>
+                  <div class="weather_img">
+                    <img
+                      src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png"
+                      alt="sun"
+                    />
                   </div>
-                </label>
+                  <div class="temp_now">+22</div>
+                  <div class="temp_feel">Feels like:</div>
+                </div>
+                <div class="date">
+                  <div class="day">June 20</div>
+                  <div class="time">Local time: 9 a.m</div>
+                </div>
               </div>
-              <div class="row-2">
-                <div class="city">New York4</div>
-                <div class="weather">Sunny</div>
-                <div class="weather_img">
-                  <img src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png" alt="sun" />
+              <div class="scroller__content">
+                <div class="row-1">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <div class="slider__round">
+                      <div class="slider__round_text">C</div>
+                      <div class="slider__round_text">F</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="row-2">
+                  <div class="city">New York3</div>
+                  <div class="weather">Sunny</div>
+                  <div class="weather_img">
+                    <img
+                      src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png"
+                      alt="sun"
+                    />
+                  </div>
+
+                  <div class="temp_now">+22</div>
+                  <div class="temp_feel">Feels like:</div>
                 </div>
 
-                <div class="temp_now">+22</div>
-                <div class="temp_feel">Feels like:</div>
+                <div class="date">
+                  <div class="day">June 20</div>
+                  <div class="time">Local time: 9 a.m</div>
+                </div>
               </div>
+              <div class="scroller__content">
+                <div class="row-1">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <div class="slider__round">
+                      <div class="slider__round_text">C</div>
+                      <div class="slider__round_text">F</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="row-2">
+                  <div class="city">New York4</div>
+                  <div class="weather">Sunny</div>
+                  <div class="weather_img">
+                    <img
+                      src="assets/images/sticker-png-drawing-sunset-sun-gratis-star.png"
+                      alt="sun"
+                    />
+                  </div>
 
-              <div class="date">
-                <div class="day">June 20</div>
-                <div class="time">Local time: 9 a.m</div>
+                  <div class="temp_now">+22</div>
+                  <div class="temp_feel">Feels like:</div>
+                </div>
+
+                <div class="date">
+                  <div class="day">June 20</div>
+                  <div class="time">Local time: 9 a.m</div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- Ирина -->
+          <!-- немного изменила название класса у кнопки для работы js -->
+          <button class="scroller__container_btn-right">
+            <img
+              src="assets/images/🦆 icon_chevron-right-arrow_.png"
+              alt="left_btn"
+            />
+          </button>
         </div>
-        <!-- Ирина -->
-        <!-- немного изменила название класса у кнопки для работы js -->
-        <button class="scroller__container_btn-right">
-          <img src="assets/images/🦆 icon_chevron-right-arrow_.png" alt="left_btn" />
-        </button>
-      </div>
-    </main>
-  </div>
-  <script src="./assets/scripts/index.js"></script>
-  <!-- <script src="./assets/scripts/irina.js"></script> -->
-</body>
-
+      </main>
+    </div>
+    <script src="./assets/scripts/index.js"></script>
+    <!-- <script src="./assets/scripts/irina.js"></script> -->
+  </body>
 </html>
