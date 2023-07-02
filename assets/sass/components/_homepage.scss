@@ -172,11 +172,11 @@ a.btn:hover {
   max-width: 100px;
 }
 
-.temp_now {
-  grid-area: tm_n;
-  font-size: 5vw;
-  font-weight: 600;
-  margin: 5px 5px;
+.temp_now{
+    grid-area: tm_n;
+    font-size: 5vw;
+    font-weight: 600;
+        margin: 5px 5px;
 }
 .temp_feel {
   grid-area: tm_f;
@@ -229,6 +229,7 @@ a.btn:hover {
   display: inline-block;
   width: 7vw;
   height: 3.5vh;
+  margin-top: 5px;
 }
 
 /* Hide default HTML checkbox */
