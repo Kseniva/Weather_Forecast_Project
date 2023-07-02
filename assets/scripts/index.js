@@ -76,8 +76,10 @@ form.addEventListener("submit", async function (evt) {
           "Feels like: " + data.current.feelslike_c + " °C";
       }
     });
-
     ////////////////////////////////////////////////////
+     // передача данных между страницами
+  window.location.href = `forecast.html?city=${city}`;
+  //
   } catch (error) {
     console.log(error);
     alert(`${error.message}.Try again`);
@@ -180,7 +182,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       const btnSwitchTempP = document.querySelector(
         `.scroller__content-${i + 1} .switch__btn-temp`
       );
-
       //////// записываем данные в карточку + добавление иконки ////////////
       cityNameP.textContent = data.location.name;
       cityTempP_c.textContent = data.current.temp_c + " °C";
@@ -193,7 +194,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         "Local time: " + cityDate.toTimeString().slice(0, 5);
       const icon = data.current.condition.icon;
       cityWeatherIconP.innerHTML = `<img src="${icon}" alt="${data.current.condition.text}" />`;
-
       //Переключатель формата температуры
       btnSwitchTempP.addEventListener("click", () => {
         if (btnSwitchTempP.checked === true) {

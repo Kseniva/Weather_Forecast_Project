@@ -4,6 +4,7 @@
 .body--forecast {
   background: no-repeat url("../images/newyork.png");
   color: #ffffff;
+  max-height: 100% ;
 }
 
 /*стили хедера Ирина*/
@@ -46,7 +47,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 44%;
   }
 
   .search__forecast-term {
@@ -74,40 +75,74 @@
     border-color: #facbcb00;
   }
 }
-
-.row-1-forecast,
-.row-2-forecast,
-.row-3-forecast,
-.row-4-forecast,
-.weekday {
-  background-color: #facbcb9c;
+.row-1-forecast {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 5px;
 }
 
-.row-2-forecast,
-.row-3-forecast {
-  height: 500px;
-  width: 630px;
-  border-radius: 20px;
+.forecast_content_box1{
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  border-radius: 5px;
+  grid-area: col1;
 }
+.forecast_content_box2 {
+  font-size: 40px;
+  text-align: center;
+}
+.row-4-forecast{
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  border-radius: 5px;
+  grid-area: r2;
+}
+.forecast_content_box2{
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  border-radius: 5px;
+  grid-area: col2;
+}
+.air-quality {
+  font-size: 30px;
+  text-align: center;
+}
+.content_container{
+  height: 50%;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 85% 15%;
+  grid-template-areas: 
+  "col1 col2"
+  "col1 r2";
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+
 
 .row-5-forecast {
   display: flex;
   flex-direction: row;
-  background-color: #facbcb;
-  margin: 20px 100px 30px 100px;
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  margin: 70px 120px 10px 120px;
   justify-content: space-between;
-  align-self: stretch;
   text-align: center;
+  max-height: 30%;
 }
 
 .weekday {
   background-color: hsl(0, 64%, 86%);
   /*padding: 50px 20px 10px 20px;*/
   border-radius: 20px;
-  font-size: 20px;
+  width: 8vw;
 }
-
+.temp_now {
+  font-size: 16px;
+}
 .weekday img {
-  height: 35vh;
-  width: 15vw;
+  height: 10vh;
+  width: 5vw;
 }
