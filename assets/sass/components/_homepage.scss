@@ -231,57 +231,15 @@ a.btn:hover {
   height: 3.5vh;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  display: none;
+
+@media (min-width: 1024px) {
+
 }
 
-.slider__round {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fcfcfc84;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-radius: 3.5vw;
+@media (min-width: 600px) and (max-width: 1023px) {
+
 }
-.slider_text_c,
-.slider_text_f {
-  text-shadow: 1px 1px rgb(131, 115, 115);
-  position: relative;
-  font-size: 1.8vw;
-}
-.slider_text_f {
-  left: 50%;
-}
-.slider_text_c {
-  left: 20%;
-}
-.slider__round:before {
-  position: absolute;
-  left: 0;
-  content: "";
-  height: 3.5vh;
-  width: 3.5vw;
-  background-color: #fcfcfc84;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 3.5vw;
-}
-input:checked + .slider__round {
-  background-color: #fcfcfc84;
-}
-input:focus + .slider__round {
-  box-shadow: 0 0 1px #fcfcfc84;
-}
-input:checked + .slider__round:before {
-  -webkit-transform: translateX(3.5vw);
-  -ms-transform: translateX(3.5vw);
-  transform: translateX(3.5vw);
+
+@media screen and (max-width: 599px) {
+
 }
