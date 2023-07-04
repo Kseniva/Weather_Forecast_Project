@@ -1,3 +1,148 @@
-.forecast-root {
-    @include base-styles;
+.root--forecast {
+  @include base-styles;
+}
+.body--forecast {
+  background: no-repeat url("../images/newyork.png");
+  color: #ffffff;
+  max-height: 100% ;
+}
+
+/*стили хедера Ирина*/
+.header__forecast {
+  margin-top: 2vh;
+  flex-direction: row;
+
+  /*первая строка хедера*/
+  .header__forecast-first {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__forecast-icon {
+    width: 10vw;
+  }
+
+  .header__forecast-link {
+    margin-right: 3vw;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  /*вторая строка хедера*/
+  .header__forecast-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .header__forecast-title {
+    font-size: 42px;
+    text-align: left;
+    margin: 0;
+  }
+
+  /*строка поиска*/
+  .search__forecast-line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+  }
+
+  .search__forecast-term {
+    width: 100%;
+    height: 7vh;
+    border: none;
+    background: #facbcba6;
+    border-radius: 10px;
+  }
+  .search__forecast-term:focus {
+    font-size: 5vh;
+    padding-left: 2%;
+  }
+
+  .search__forecast-button {
+    background: none;
+    border: none;
+    height: 6.5vh;
+    position: absolute;
+    right: 0%;
+    margin: 3px 2px;
+  }
+  .search__forecast-button:hover {
+    border: solid;
+    border-color: #facbcb00;
+  }
+}
+.row-1-forecast {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 5px;
+}
+
+.forecast_content_box1{
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  border-radius: 5px;
+  grid-area: col1;
+}
+.forecast_content_box2 {
+  font-size: 40px;
+  text-align: center;
+}
+.row-4-forecast{
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  border-radius: 5px;
+  grid-area: r2;
+}
+.forecast_content_box2{
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  border-radius: 5px;
+  grid-area: col2;
+}
+.air-quality {
+  font-size: 30px;
+  text-align: center;
+}
+.content_container{
+  height: 50%;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 85% 15%;
+  grid-template-areas: 
+  "col1 col2"
+  "col1 r2";
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+
+
+.row-5-forecast {
+  display: flex;
+  flex-direction: row;
+  text-shadow: 1px 1px rgb(131, 115, 115);
+  background-color: #facbcba6;
+  margin: 70px 120px 10px 120px;
+  justify-content: space-between;
+  text-align: center;
+  max-height: 30%;
+}
+
+.weekday {
+  background-color: hsl(0, 64%, 86%);
+  /*padding: 50px 20px 10px 20px;*/
+  border-radius: 20px;
+  width: 8vw;
+}
+.temp_now {
+  font-size: 16px;
+}
+.weekday img {
+  height: 10vh;
+  width: 5vw;
 }
