@@ -24,7 +24,7 @@ async function getWeatherData(city) {
   if (response.ok) {
     return data; // вывод данных при успешно выполненом запросе
   } else {
-    throw new Error (` ${response.statusText}`) // генерируем ошибку при невыполнении запроса
+    throw new Error(` ${response.statusText}`) // генерируем ошибку при невыполнении запроса
   }
 }
 
